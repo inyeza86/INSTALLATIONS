@@ -56,3 +56,24 @@ sudo apt install unzip -y
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install
+
+# 6. KUBECTL INSTALLATION
+# Install Kubectl
+# Link : https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
+
+# Update the apt package index and install packages needed to use the Kubernetes apt repository
+sudo apt-get update -y
+# apt-transport-https may be a dummy package; if so, you can skip that package
+sudo apt-get install -y apt-transport-https ca-certificates curl gnupg
+
+# Download the public signing key for the Kubernetes package repositories. The same signing key is used for all repositories so you can disregard the version in the URL:
+curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.32/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+sudo chmod 644 /etc/apt/keyrings/kubernetes-apt-keyring.gpg # allow unprivileged APT programs to read this keyring
+
+# Add the Kubernetes apt repository
+echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.32/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+sudo chmod 644 /etc/apt/sources.list.d/kubernetes.list # helps tools such as command-not-found to work correctly
+
+# Update apt package index, then install kubectl
+sudo apt-get update -y
+sudo apt-get install -y kubectl
