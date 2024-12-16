@@ -1,5 +1,5 @@
 #!/bin/bash
-# Install openJDK 17
+# 1. Install openJDK 17
 sudo apt-get update -y
 sudo apt-get install -y openjdk-17-jre-headless
 sudo apt-get install -y openjdk-17-jdk-headless
@@ -48,3 +48,11 @@ sudo apt-get install apt-transport-https --yes
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/helm.gpg] https://baltocdn.com/helm/stable/debian/ all main" | sudo tee /etc/apt/sources.list.d/helm-stable-debian.list
 sudo apt-get update -y
 sudo apt-get install helm -y
+
+# 5. AWS CLI INSTALLATION
+# Install AWS CLI
+# Link : https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+sudo apt install unzip -y
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
