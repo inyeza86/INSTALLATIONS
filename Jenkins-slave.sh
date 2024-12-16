@@ -5,6 +5,10 @@ sudo apt-get install -y openjdk-17-jre-headless
 sudo apt-get install -y openjdk-17-jdk-headless
 sudo java -version
 
+# Create folder in opt
+sudo mkdir -p /opt/jenkins
+sudo chown -R ubuntu:ubuntu /opt/jenkins
+
 # 2. DOCKER INSTALLATION
 # Install Docker
 # Link: https://docs.docker.com/engine/install/ubuntu/
