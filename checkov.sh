@@ -1,4 +1,5 @@
 #!/bin/bash
+# checkov documentation link: https://www.checkov.io/1.Welcome/Quick%20Start.html
 # This script will install checkov which it is an open source tool to scan IAC for security issues.
 # This script will install checkov in your local machine.
 # Prerequisites: make sure python3 is installed in your local machine.
