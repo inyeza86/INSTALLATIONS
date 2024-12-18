@@ -12,3 +12,10 @@ sudo apt-get install trivy -y
 
 # 3. Check the installation:
 trivy --version
+
+#============================================================================
+# Usage Example
+# Once installed, you can start using Trivy to scan images, files, or repositories:
+# trivy image nginx:latest       # Scan a Docker image
+# trivy filesystem /path/to/dir  # Scan files or directories
+# trivy repo https://github.com/inyeza86/3-TIER-Architecture.git  # Scan a git repo
