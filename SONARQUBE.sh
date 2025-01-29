@@ -70,7 +70,7 @@ cd /opt
 sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.7.1.62043.zip
 sudo unzip sonarqube-9.7.1.62043.zip
 sudo mv sonarqube-9.7.1.62043 sonarqube
-rm -rf sonarqube-9.7.1.62043.zip
+sudo rm -rf sonarqube-9.7.1.62043.zip
 
 # 6. Configure SonarQube User and Permissions
 
