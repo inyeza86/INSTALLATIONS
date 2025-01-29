@@ -15,11 +15,11 @@ curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
 cd /usr/local/bin
 wget https://releases.hashicorp.com/terraform/1.10.3/terraform_1.10.3_linux_amd64.zip
-unzip
+unzip terraform_1.10.3_linux_amd64.zip
 
 # packer.io
 wget https://releases.hashicorp.com/packer/1.11.2/packer_1.11.2_linux_amd64.zip
-unzip
+unzip packer_1.11.2_linux_amd64.zip
 
 # document.ansible.com  Select ubuntu and download the file accordingly
 sudo apt update
