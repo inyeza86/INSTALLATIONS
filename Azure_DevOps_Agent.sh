@@ -37,9 +37,8 @@ ctrl w  host_key_checking = False
 # Install trivy https://github.com/aquasecurity/trivy/releases/download/v0.41.0/trivy_0.41.0_Linux-64bit.deb
 
 cd /usr/local/bin
-Wget https://github.com/aquasecurity/trivy/releases/download/v0.41.0/trivy_0.41.0_Linux-64bit.deb
-dpkg -i trivy file
-Trivy
+wget https://github.com/aquasecurity/trivy/releases/download/v0.41.0/trivy_0.41.0_Linux-64bit.deb
+dpkg -i trivy_0.41.0_Linux-64bit.deb
 
 reboot the system for configurations.
 
