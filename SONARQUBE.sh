@@ -9,7 +9,7 @@ exit # to exit out of posgres user session
 # 2. Configure PostgreSQL
 Edit postgresql.conf:
 
-sudo nano /var/lib/postgresql/sonarqube/postgresql.conf
+sudo vim /var/lib/postgresql/sonarqube/postgresql.conf
 
 Add:
 
@@ -18,7 +18,7 @@ port = 5433 # normally postgresql listen on port 5432 but since we have already 
 unix_socket_directories = '/var/run/postgresql'
 
 Edit pg_hba.conf:
-sudo nano /var/lib/postgresql/sonarqube/pg_hba.conf
+sudo vim /var/lib/postgresql/sonarqube/pg_hba.conf
 
 Add:
 
@@ -29,7 +29,7 @@ host all all ::1/128 md5
 
 # 3. Create and Start PostgreSQL Service
 
-sudo nano /etc/systemd/system/postgresql-sonarqube.service
+sudo vim /etc/systemd/system/postgresql-sonarqube.service
 
 Add service content:
 
@@ -80,7 +80,7 @@ sudo chown sonar:sonar /opt/sonarqube -R
 
 Edit sonar.properties:
 
-sudo nano /opt/sonarqube/conf/sonar.properties
+sudo vim /opt/sonarqube/conf/sonar.properties
 
 Add:
 properties
@@ -91,7 +91,7 @@ sonar.jdbc.url=jdbc:postgresql://localhost:5433/sonarqube
 # 7. System Configuration
 Create SonarQube service:
 
-sudo nano /etc/systemd/system/sonar.service
+sudo vim /etc/systemd/system/sonar.service
 
 Add:
 
@@ -114,7 +114,7 @@ WantedBy=multi-user.target
 
 Configure system limits:
 
-sudo nano /etc/sysctl.conf
+sudo vim /etc/sysctl.conf
 
 Add:
 
@@ -123,7 +123,7 @@ fs.file-max=65536
 
 Configure user limits:
 
-sudo nano /etc/security/limits.conf
+sudo vim /etc/security/limits.conf
 
 Add:
 
