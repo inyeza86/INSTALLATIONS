@@ -82,8 +82,8 @@ Edit sonar.properties:
 
 sudo vim /opt/sonarqube/conf/sonar.properties
 
-Add:
-properties
+Add properties under DATABASE => User credentials
+
 sonar.jdbc.username=sonar
 sonar.jdbc.password=my_strong_password
 sonar.jdbc.url=jdbc:postgresql://localhost:5433/sonarqube
