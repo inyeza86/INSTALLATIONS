@@ -139,6 +139,9 @@ sudo systemctl daemon-reload
 sudo systemctl start sonar
 sudo systemctl enable sonar
 
+# check the status
+sudo systemctl status sonar
+
 # 9. Access SonarQube
 - Wait 5 minutes
 - Access: http://your-server:9000
