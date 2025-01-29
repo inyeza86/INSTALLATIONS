@@ -4,6 +4,7 @@ sudo mkdir -p /var/lib/postgresql/sonarqube
 sudo chown postgres:postgres /var/lib/postgresql/sonarqube
 sudo su - postgres
 /usr/lib/postgresql/15/bin/initdb -D /var/lib/postgresql/sonarqube
+exit # to exit out of posgres user session
 
 # 2. Configure PostgreSQL
 Edit postgresql.conf:
