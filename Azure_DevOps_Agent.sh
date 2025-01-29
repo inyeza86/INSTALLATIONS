@@ -30,7 +30,7 @@ sudo apt install ansible
 cd /etc/ansible
 cp ansible.cfg ansible.cfg_backup
 ansible-config init --disabled >ansible.cfg
-nano ansible.cfg
+vim ansible.cfg
 
 ctrl w  host_key_checking = False
 
