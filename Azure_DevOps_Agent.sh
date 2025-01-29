@@ -1,7 +1,7 @@
 sudo apt update && apt install -y unzip jq net-tools
 apt install openjdk-17-jdk -y
 apt install maven -y && curl https://get.docker.com | bash
-usermod -a -G docker adminsai
+usermod -a -G docker inyeza
 
 # aws cli install
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
